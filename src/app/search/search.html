@@ -1,15 +1,26 @@
 <h1>search page</h1>
 
-<div class="input-group input-group-lg">
-		<input ng-model="message"  class="form-control" type="text" placeholder="Enter Movie Title">
-		<span ng-click="" class="input-group-addon">Go!</span>
-	</div>
-	<br>
-	<div class="panel panel-default">
-      <div class="panel-heading lead text-center">Search Results For: {{message}}</div>
-      <div class="panel-body">
-		<h1>{{search.message}}</h1>
-      </div>
+<body ng-controller= "SearchController as search" class="container">
+    <div class="input-group input-group-lg">
+        <input ng-model="search.movie" class="form-control" type="text" placeholder="Enter Movie Title">
+        <span ng-click="search.inputResults(search.movie)" class="input-group-addon">Go!</span>
     </div>
-
-
+    <br>
+    <div class="panel panel-default">
+        <div class="panel-heading lead text-center">Search Results For: {{search.searchInput.title}}</div>
+        <div class="panel-body">
+			<div class="row">
+				<div class="panel panel-default col-sm-4" ng-repeat="x in search.movieData.data.Search">
+		        	<div class="panel-heading lead text-center">{{x.Title}}</div>
+			        	<div class="panel-body text-center">
+				        	<img src="{{x.Poster}}">
+				        	<p>{{x.Title}}</p>
+				        	<p>{{x.Year}}</p>
+				            <h1></h1>
+				            <a ui-sref="detail({imdbID: x.imdbID})">Go To Detail Page</a>
+				        </div>    
+		        </div>
+		    </div>        
+        </div>
+    </div>
+</body>

@@ -1,1 +1,37 @@
 <h1>{{detail.movie}}</h1>
+<body ng-controller= "DetailController as detail" class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading lead text-center"><p>{{detail.detailsData.data.Title}}</p><a ui-sref="search">Return To Search Page</a></div>
+	        <div class="panel-body">
+				<div>
+
+					
+					<img src="{{detail.detailsData.data.Poster}}">
+					<p><b>Title</b>: {{detail.detailsData.data.Title}}</p>
+
+					<p><b>Rating</b>:
+					{{detail.detailsData.data.Rated}}</p>
+
+					<p><b>Genre</b>: {{detail.detailsData.data.Genre}}</p>
+
+					
+					<p>{{detail.detailsData.data.Awards}}</p>
+					<p>{{detail.detailsData.data.Country}}</p>
+					<p>{{detail.detailsData.data.Director}}</p>
+					<p>{{detail.detailsData.data.Language}}</p>
+					<p>{{detail.detailsData.data.Metascore}}</p>
+					<p>{{detail.detailsData.data.Plot}}</p>
+					<p>{{detail.detailsData.data.Actor}}</p>
+					<p>{{detail.detailsData.data.Released}}</p>
+					<p>{{detail.detailsData.data.Runtime}}</p>
+					<p>{{detail.detailsData.data.Actors}}</p>
+
+
+				</div>         
+	        </div>
+   		
+   	</div>	
+</body>
+
+
+<a ui-sref="search">Go To Search Page</a>
