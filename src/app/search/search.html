@@ -1,4 +1,15 @@
 <h1>search page</h1>
 
+<div class="input-group input-group-lg">
+		<input ng-model="message"  class="form-control" type="text" placeholder="Enter Movie Title">
+		<span ng-click="" class="input-group-addon">Go!</span>
+	</div>
+	<br>
+	<div class="panel panel-default">
+      <div class="panel-heading lead text-center">Search Results For: {{message}}</div>
+      <div class="panel-body">
+		<h1>{{search.message}}</h1>
+      </div>
+    </div>
 
-<h1>{{search.message}}</h1>
+
