@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Gulp Demo</title>
+<!-- bower:css -->
+<link rel="stylesheet" href="app/bower_components/bootstrap/dist/css/bootstrap.css" />
+<!-- endbower -->
+
+<!-- inject:css -->
+<link rel="stylesheet" href="app/css/styles.css">
+<!-- endinject -->
+</head>
+
+<body>
+<div class="container">
+	<div id="jumboHeader" class="jumbotron text-center">
+		<header>
+			<h1>Movie Finder</h1>
+			<h2>Project No. 9</h2>
+		</header>
+    </div>
+	<div class="input-group input-group-lg">
+		<input ng-model=""  class="form-control" type="text" placeholder="Enter Movie Title">
+		<span ng-click="" class="input-group-addon">Go!</span>
+	</div>
+	<br>
+	<div class="panel panel-default">
+      <div class="panel-heading lead text-center">Search Results For: {{Will change with the movie title!}}</div>
+      <div class="panel-body">
+      	<div id="main">
+  
+    	<!-- angular templating -->
+		<!-- this is where content will be injected -->
+    		<div ui-view>
+    			
+    		</div>
+    
+ 		</div>
+      </div>
+    </div>
+</div>
+
+<!-- bower:js -->
+
+<script src="app/bower_components/jquery/dist/jquery.js"></script>
+<script src="app/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="app/bower_components/angular/angular.js"></script>
+<script src="app/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endbower -->
+<!-- inject:js -->
+<script src="app/js/app.module.js"></script>
+<script src="app/detail/detail.controller.js"></script>
+<script src="app/search/search.controller.js" ></script>
+<!-- endinject -->
+</body>
+</html>
