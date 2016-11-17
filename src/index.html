@@ -2,25 +2,30 @@
 <html lang="en" ng-app="app">
 <head>
   <meta charset="UTF-8">
-  <title>Gulp Demo</title>
+  <title>Movie Finder</title>
 <!-- bower:css -->
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 <!-- endbower -->
-
 <!-- inject:css -->
 <link rel="stylesheet" href="css/styles.css">
 <!-- endinject -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
-<body>
-<div class="container">
-	<div id="jumboHeader" class="jumbotron text-center">
-		<header>
-			<h1>Movie Finder</h1>
-			<h2>Project No. 9</h2>
-		</header>
+<body id="entireBody">
+<div>
+	<div id="jumboHeader" class="jumbotron jumbotron-icon text-center z-depth-4 row">
+				<header >
+					<h1 class="z-depth-3" id="h1">Movie Finder</h1>
+					<i id="icon" class="fa fa-ticket fa-5x"></i>
+					<h2 class="z-depth-4">Project No. 9</h2>
+				</header>
+				
     </div>
-	<div ui-view>
+	<div class="container" ui-view>
     			
     </div>
 
@@ -34,8 +39,8 @@
 <!-- endbower -->
 <!-- inject:js -->
 <script src="app/app.module.js"></script>
-<script src="app/detail/detail.controller.js"></script>
 <script src="app/core/movie.factory.js"></script>
+<script src="app/detail/detail.controller.js"></script>
 <script src="app/search/search.controller.js"></script>
 <!-- endinject -->
 </body>
