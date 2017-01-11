@@ -1,0 +1,48 @@
+<!-- HERO TWO - Detail -->
+<body ng-controller="DetailController as detail">
+    <section class="hero is-fullheight" id="hero2-background">
+        <div class="hero-body">
+            <div class="container">
+                <nav class="panel"> 
+                    <div class="panel-block">
+	                    <div class="display-results-center">
+	                    	<div class="panel-heading">
+	                           <p class="results-panel-title">{{detail.detailsData.data.Title}}</p>
+	                    	</div>
+	                    	<div id="episode-details-list">
+								<p><span class="details-info-caption">Released: </span> {{detail.detailsData.data.Released}}</p>
+								<p><span class="details-info-caption">Rating: </span> {{detail.detailsData.data.Rated}}</p>
+								<p><span class="details-info-caption">Genre: </span> {{detail.detailsData.data.Genre}}</p>
+								<p><span class="details-info-caption">Run Time: </span> {{detail.detailsData.data.Runtime}}</p>
+								<p><span class="details-info-caption">Director: </span> {{detail.detailsData.data.Director}}</p>
+								<p><span class="details-info-caption">Actors: </span> {{detail.detailsData.data.Actors}}</p>
+								<p><span class="details-info-caption">Plot: </span> {{detail.detailsData.data.Plot}}</p>
+								<p><span class="details-info-caption">Awards: : </span> {{detail.detailsData.data.Awards}}</p>
+								<p><span class="details-info-caption">Country: </span> {{detail.detailsData.data.Country}}</p>
+								<p><span class="details-info-caption">Language: </span> {{detail.detailsData.data.Language}}</p>
+								<p><span class="details-info-caption">Score: </span> {{detail.detailsData.data.Metascore}}</p>
+							</div>
+							<div id="return-to-search">
+								<a ui-sref="search">Return To Search</a>
+							</div>
+						</div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="hero-foot">
+        	<footer class="footer star-wars-footer">
+  				<div class="container">
+    				<div class="content has-text-centered">
+	        			<p>
+	            			<strong>Created</strong> By <span class="footer-bright-color-text">Dreu Stepanik</span>
+	        			</p>
+	        			<p class="icon">
+	                		<i class="fa fa-github footer-bright-color-text"></i>
+	       				</p>
+    				</div>
+				</div>
+			</footer>
+        </div>
+    </section>
+</body>

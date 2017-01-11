@@ -1,13 +1,12 @@
 (function() {
    'use strict';
-// Gave a name to the Factory
+
    angular
        .module('app')
        .factory('MovieFactory', MovieFactory);
 // Inject the dependencies within the Factory
    MovieFactory.$inject = ['$http'];
 
-   /* @ngInject */
    function MovieFactory($http) {
        var service = {
            getMovieData: getMovieData,

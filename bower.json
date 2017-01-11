@@ -1,5 +1,5 @@
 {
-  "name": "09-MovieFinder",
+  "name": "Star Wars Fan Page",
   "authors": [
     "Dreu Stepanik <dreuezekiel@gmail.com>"
   ],
@@ -15,16 +15,16 @@
     "tests"
   ],
   "overrides": {
-    "bootstrap": {
+    "bulma": {
       "main": [
-        "dist/css/bootstrap.css",
-        "dist/js/bootstrap.js"
+        "css/bulma.css"
       ]
     }
   },
   "dependencies": {
     "angular": "^1.5.8",
     "bootstrap": "^3.3.7",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "bulma": "^0.3.0"
   }
 }

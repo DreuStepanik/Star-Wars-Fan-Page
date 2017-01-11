@@ -1,47 +1,81 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
-  <meta charset="UTF-8">
-  <title>Movie Finder</title>
-<!-- bower:css -->
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-<!-- endbower -->
-<!-- inject:css -->
-<link rel="stylesheet" href="css/styles.css">
-<!-- endinject -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars Fan Page</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" />
+    <!-- endbower -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endinject -->
 </head>
 
-<body id="entireBody">
-<div>
-	<div id="jumboHeader" class="jumbotron jumbotron-icon text-center z-depth-4 row">
-				<header >
-					<h1 class="z-depth-3" id="h1">Movie Finder</h1>
-					<i id="icon" class="fa fa-ticket fa-5x"></i>
-					<h2 class="z-depth-4">Project No. 9</h2>
-				</header>
-				
+<body ng-controller= "SearchController">
+	<section class="hero is-fullheight" id="hero1-background">
+        <div class="hero-head">
+            <header class="nav">
+                <div class="container">
+                    <div class="nav-left">
+                        <div class="nav-item">
+                            <h1 id="use-the-force">
+                                USE THE FORCE
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="starwars-animation">
+                    <img src="/img/star.svg" alt="Star" class="star">
+                    <br>
+                    <img src="/img/wars.svg" alt="Wars" class="wars">
+                </div>
+            </div>
+        </div>
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+            <div id="hero1-lower-text">
+                <h1>
+                    STAR WARS FILM SELECTOR
+                </h1>
+                <h2>
+                    <i class="fa fa-arrow-circle-o-down"></i>
+                </h2>
+            </div>
+        </div>
+    </section>
+    <div>
+        <div ui-view>
+        </div>
     </div>
-	<div class="container" ui-view>
-    			
-    </div>
-
-</div>
-
-<!-- bower:js -->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<!-- endbower -->
-<!-- inject:js -->
-<script src="app/app.module.js"></script>
-<script src="app/core/movie.factory.js"></script>
-<script src="app/detail/detail.controller.js"></script>
-<script src="app/search/search.controller.js"></script>
-<!-- endinject -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbower -->
+    <script>
+        function scrollToBottom() {
+            document.body.scrollIntoView(false);
+        }
+	</script>
+    <!-- inject:js -->
+    <script src="app.module.js"></script>
+    <script src="core/movie.factory.js"></script>
+    <script src="detail/detail.controller.js"></script>
+    <script src="search/search.controller.js"></script>
+    <!-- endinject -->
 </body>
+
 </html>

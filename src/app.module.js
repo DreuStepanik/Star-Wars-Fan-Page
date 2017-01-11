@@ -10,12 +10,12 @@
             $stateProvider
                 .state('search', {
                     url: '/search',
-                    templateUrl: 'app/search/search.html',
+                    templateUrl: 'search/search.html',
                     controller: 'SearchController as search'
                 })
                 .state('detail', {
                     url: '/detail?imdbID',
-                    templateUrl: 'app/detail/detail.html',
+                    templateUrl: 'detail/detail.html',
                     controller: 'DetailController as detail'
                 });
 

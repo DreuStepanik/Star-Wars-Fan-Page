@@ -9,13 +9,8 @@
 
      function SearchController(MovieFactory, $stateParams) {
         var vm = this;
-         vm.movie = '';
-        
-        
-
         //what happens on click   
-        vm.inputResults = function(movies) {
-
+        vm.specificEpisode = function(movies) {
             //retrieving the data from the factory
             MovieFactory.getMovieData(movies).then(
                 function(data) {

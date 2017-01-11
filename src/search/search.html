@@ -1,0 +1,84 @@
+<!-- HERO TWO -->
+<body ng-controller="SearchController as search">
+    <section class="hero is-fullheight" id="hero2-background">
+        <div class="hero-nav">
+            <div id="episode-tabs" class="tabs is-toggle is-fullwidth is-large">
+                <ul>
+                    <li>
+                        <!-- use onClick to jump to bottom of page, once clicked -->
+                        <!-- give a specific search term to each ng-click request -->
+                        <a onclick="scrollToBottom()" ng-click="search.specificEpisode('Star Wars Episode The Phantom Menace')">
+                            <span class="roman-numeral-selector">I</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToBottom()" ng-click="search.specificEpisode('Star Wars Episode Attack of the Clones')">
+                            <span class="roman-numeral-selector">II</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToBottom()" ng-click="search.specificEpisode('Star Wars Episode Revenge of the Sith')">
+                            <span class="roman-numeral-selector">III</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToBottom()" ng-click="search.specificEpisode('Star Wars Episode A New Hope')">
+                            <span class="roman-numeral-selector" ng-click="search.inputResults('step brothers')">IV</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToBottom()" ng-click="search.specificEpisode('Star Wars Episode The Empire Strikes Back')">
+                            <span class="roman-numeral-selector">V</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToBottom()" ng-click="search.specificEpisode('Star Wars Episode Return of the Jedi')">
+                            <span class="roman-numeral-selector">VI</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="scrollToBottom()" ng-click="search.specificEpisode('Star Wars The Force Awakens')">
+                            <span class="roman-numeral-selector">VII</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="container">
+                <nav class="panel"> 
+                    <div class="panel-block">
+                    <!-- For this specific code test, since I only want to display one episode, rather than the entire saga, I will use 'limitTo:1', to only display the first key object. -->
+                        <div class="display-results-center" ng-repeat="x in search.movieData.data.Search|limitTo:1">
+                                <div class="panel-heading">
+                                    <p class="results-panel-title">{{x.Title}}</p>
+                                </div>
+                                <div id="search-results-body">
+                                    <img src="{{x.Poster}}">
+                                        <p>{{x.Year}}</p>
+                                        <a id="goToDetail" ui-sref="detail({imdbID: x.imdbID})">- VIEW IMBD -</a>
+                                </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div id="scroll-up">
+            <a href="#">SCROLL UP</a>
+        </div>
+        <div class="hero-foot">
+        	<footer class="footer star-wars-footer">
+  				<div class="container">
+    				<div class="content has-text-centered">
+                        <p>
+                            <strong>Created</strong> By <span class="footer-bright-color-text">Dreu Stepanik</span>
+                        </p>
+                        <p class="icon">
+                            <i class="fa fa-github footer-bright-color-text"></i>
+                        </p>
+                    </div>
+				</div>
+			</footer>
+        </div>
+    </section>
+</body>

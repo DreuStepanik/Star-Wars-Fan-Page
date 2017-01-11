@@ -1,134 +1,181 @@
-#jumboHeader {
-	margin: 20px 20px auto 20px;
-	background-color: #b71c1c;
-	color: #fff;
-	text-shadow: 2px 4px 6px #000000;
+
+/*****************************************
+	      Code Test -- Hero One
+*****************************************/
+#use-the-force {
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: #a6a6a6;
+    letter-spacing: 1px;
 }
 
-#icon {
-	float: right;
-	margin-top: -180px;
-	margin-right: 100px;
-	margin-bottom: -20px;
-	font-size: 20em;
+.roman-numeral-selector {
+    font-size: 2em;
+    font-family: 'Libre Baskerville', serif;
 }
 
-h2 {
-	margin: 1.78rem 0 1.424rem 378px;
+#hero1-background {
+    background-image: url("/img/star-wars-background-top.jpg");
 }
 
-#searchPanel {
-	background-color: #212121  ;
-	color: #fff;
-	font-size: 4em;
-	text-shadow: 2px 4px 6px #000000;
-	opacity: .8;
+#hero1-lower-text {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.75em;
+    color: #737373;
+    letter-spacing: 2px;
+    margin-bottom: 5%;
 }
 
-#searchPage {
-	text-shadow: 4px 4px 8px #000000;
-	color: #fff;
-	font-size: 6em;
-	text-align: center;
+#hero1-lower-text h2 {
+    font-size: 1.75em;
+    color: #76ff03;
 }
 
-#searchIconDiv {
-	text-align: center;
-    margin-bottom: -5%;
-    margin-top: 2%;
+.tabs.is-toggle a {
+  border: 2px solid #dbdbdb;
+  margin-bottom: 0;
+  position: relative;
 }
 
-#searchButton {
-	background-color: #b71c1c;
-	font-size: 2.3em;
+.tabs.is-toggle a:hover {
+  background-color: none;
+  border-color: #76ff03;
+  z-index: 2;
+  color: #76ff03;
 }
 
-#searchInput {
-	font-size: 250%;
-	background-color: black;
-	color: #fff;
-	opacity: .7;
-
+#episode-tabs {
+	margin-top: -6%;
 }
 
-::-webkit-input-placeholder {
-	color: #fff;
-	background-color: black;
-	opacity: .6;
+/******************************************
+       Code Test Star Wars Animation
+******************************************/
+
+@keyframes star {
+  0% {
+    opacity: 0;
+    transform: scale(3) translateY(-3em);
+  }
+  20% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+    transform: scale(2) translateY(-1.5em);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
 }
 
-#smallPanel {
-	background-color: #b71c1c   ;
-	color: #fff;
-	font-size: 2em;
-	text-shadow: 2px 2px 4px #000000;
+@keyframes wars {
+  0% {
+    opacity: 0;
+    transform: scale(3) translateY(3em);
+  }
+  20% {
+    opacity: 1;
+  }
+  89% {
+    opacity: 1;
+    transform: scale(2) translateY(1.5em);
+  }
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
 }
 
-#h1 {
-	font-size: 7em;
-    margin-right: 26%;
+.star {
+  animation: star 10s ease-out infinite;
+}
+.wars {
+  animation: wars 10s ease-out infinite;
 }
 
-#p1 {
-	font-size: 2em;
+.starwars-animation {
+  perspective: 800px;
+  transform-style: preserve3d;
 }
 
-#p2 {
-	font-size: 1.4em;
+/****************************************
+		      Code Test Hero Two
+           Search && Detail
+****************************************/
+#hero2-background {
+	background-image: url("/img/darth-vader-wallpaper.jpg");
 }
 
-#entireBody {
-	background-image: url("https://images5.alphacoders.com/390/390465.jpg");
+.star-wars-footer {
+	max-height: 2em;
+	background-color: rgba(38, 38, 38, .8);
 }
 
-#largeSearchPanel {
-	background-color: rgba(255, 255, 255, .4) !important;
-	
+.results-panel-title {
+	font-family: 'Oswald', sans-serif;
+  font-size: 1.5em;
+  color: #a6a6a6;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
-#smallPanelBody {
-	height: 780px;
+.display-results-center {
+  margin-left: auto;
+  margin-right: auto; 
 }
 
-#searchHeader {
-	background-color: black;
-	opacity: .8;
+#search-results-body {
+  text-align: center !important;
+  margin-top: 2%;
+  font-size: 1.5em;
+  color: #a6a6a6;
+  font-family: 'Oswald', sans-serif;
 }
 
-#searchIcon {
-	font-size: 7em;
-	color: #fff;
-    margin-bottom: 0%;
+.panel-heading {
+  background-color: rgba(0, 0, 0, .9);
+  border-radius: 3px 3px 0 0;
+  color: #363636;
+  font-size: 1.25em;
+  font-weight: 300;
+  line-height: 1.25;
+  padding: 0.5em 0.75em;
 }
 
-#poster {
-	float: left;
-	text-align: center;
-	background-color: #fff;
+.panel-heading,
+.panel-tabs,
+.panel-block {
+  border-bottom: 2px solid #ff0101;
+  border-top: 2px solid #ff0101;
+  background-color: rgba(0, 0, 0, .9);
 }
 
-#detailInfo {
-	float: right;
-	background-color: #fff;
-	font-size: 1.5em;
+#episode-details-list {
+  font-size: 1.3em;
+  color: #a6a6a6;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
-#detailPanel {
-	background-color: rgba(255, 255, 255, .4) !important;
+.details-info-caption {
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
-#returnSearch {
-	font-size: 1.8em;
+#scroll-up,
+#return-to-search {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.4em;
 }
 
-#goToDetail {
-	font-size: 1.5em;
-}
-
-#detailPanelHeading {
-	background-color: black;
-	opacity: .7;
-	color: #fff;
-	font-size: 4em;
-	text-shadow: 2px 4px 6px #000000;
+.footer-bright-color-text {
+  color: #00d1b2;
+  font-size: 1.25em;
+  font-weight: bold;
 }
